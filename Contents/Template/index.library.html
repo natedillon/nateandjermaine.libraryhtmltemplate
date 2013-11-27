@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="media-per-column" content="7" />
+    <meta name="columns-per-page" content="3" />
+    <title>Library</title>
+    <style>
+        body {
+            background: white;
+        }
+
+        .arrow.left:before {
+            content: "<";
+        }
+        .arrow.right:after {
+            content: ">";
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <div id="header_main">
+        <div id="collection_info">
+           <div id="user"><img src="$addressBookImage48" alt="" /></div>
+           <div id="username">$fullName</div>
+           <div id="stats">
+               <div id="total">Collection Total:<br /><span style="font-weight: bold">$totalItems</span></div>
+               <div id="updated">Last Updated:<br /><span style="font-weight: bold">$publishDate</span></div>
+           </div>
+        </div>
+    </div>
+</div>
+    
+<div id="content">
+    <div class="navigation">
+        Shelf: $shelfNavigationPopup
+        <div class="crumbs">
+            $pageNavigation
+        </div>
+    </div>
+
+    <hr />
+
+    <div id="media">
+        <table>
+            <tr>
+                <td>
+                    <!-- Delicious Library will take the last element with class "medium"
+                         and stamp them out with <tr> and <td> elements controlled by the
+                         media-per-column and columns-per-page <meta> elements in <head> -->
+                    <div class="medium" id="medium$uuidString">
+                        <div class="cover">$coverImage128</div>
+                        <div><a href="$amazonURL" class="title">$title</a></div>
+                        <div>$creatorsCompositeString</div>
+                        <div>Purchased on $purchaseDate</div>
+                    </div> <!-- End medium -->
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="navigation">
+        <div class="crumbs">
+            $pageNavigation
+        </div>
+    </div>
+</div>
+
+<footer>
+    <a href="http://www.delicious-monster.com">Made with Delicious Library</a>
+    <p>$librarySearchString</p>
+</footer>
+
+</body>
+</html>
