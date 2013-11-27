@@ -1,0 +1,9 @@
+body {
+  background: white;
+}
+.arrow.left:before {
+  content: "<";
+}
+.arrow.right:after {
+  content: ">";
+}
