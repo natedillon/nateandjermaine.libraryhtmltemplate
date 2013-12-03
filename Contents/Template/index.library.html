@@ -18,60 +18,67 @@
 	</head>
 	
 	<body>
-		<div id="header">
-			<div id="header_main">
-				<div id="collection_info">
-					<div id="user"><img src="$addressBookImage48" alt="" /></div>
-					<div id="username">$fullName</div>
-					<div id="stats">
-						<div id="total">Collection Total:<br /><span style="font-weight: bold">$totalItems</span></div>
-						<div id="updated">Last Updated:<br /><span style="font-weight: bold">$publishDate</span></div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<div class="container">
+			<header role="banner" class="header">
+				<h1>$fullName</h1>
+				<dl>
+					<dt>Collection Total:</dt>
+					<dd>$totalItems</dd>
+					<dt>Last Updated:</dt>
+					<dd>$publishDate</dd>
+				</dl>
+			</header> <!-- end .header -->
 		
-		<div id="content">
+			<hr />
+		
 			<div class="navigation">
-				Shelf: $shelfNavigationPopup
-				<div class="crumbs">
-					$pageNavigation
-				</div>
+				<label>Shelf:</label>
+				$shelfNavigationPopup
 			</div>
 		
 			<hr />
 		
-			<div id="media">
-				<table>
-					<tr>
-						<td>
-							<!--
-								Delicious Library will take the last element with class "medium"
-								and stamp them out with <tr> and <td> elements controlled by the
-								media-per-column and columns-per-page <meta> elements in <head>
-							-->
-							<div class="medium" id="medium$uuidString">
-								<div class="cover">$coverImage128</div>
-								<div><a href="$amazonURL" class="title">$title</a></div>
-								<div>$creatorsCompositeString</div>
-								<div>Purchased on $purchaseDate</div>
-							</div> <!-- End medium -->
-						</td>
-					</tr>
-				</table>
+			<div class="pagination">
+				$pageNavigation
 			</div>
 		
-			<div class="navigation">
-				<div class="crumbs">
-					$pageNavigation
+			<hr />
+		
+			<div id="content" class="content">
+				<div id="media">
+					<table>
+						<tr>
+							<td>
+								<!--
+									Delicious Library will take the last element with class "medium"
+									and stamp them out with <tr> and <td> elements controlled by the
+									media-per-column and columns-per-page <meta> elements in <head>
+								-->
+								<div class="medium" id="medium$uuidString">
+									<div class="cover">$coverImage128</div>
+									<div><a href="$amazonURL" class="title">$title</a></div>
+									<div>$creatorsCompositeString</div>
+									<div>Purchased on $purchaseDate</div>
+								</div> <!-- End medium -->
+							</td>
+						</tr>
+					</table>
 				</div>
-			</div>
-		</div>
+			</div> <!-- end .content -->
 		
-		<footer>
-			<a href="http://www.delicious-monster.com">Made with Delicious Library</a>
-			<p>$librarySearchString</p>
-		</footer>
+			<hr />
+		
+			<div class="pagination">
+				$pageNavigation
+			</div>
+		
+			<hr />
+		
+			<footer>
+				<p>Made with <a href="http://www.delicious-monster.com">Delicious Library</a><br />
+					$librarySearchString</p>
+			</footer>
+		</div> <!-- end .container -->
 		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/libs/jquery-2.0.3.min.js"><\/script>')</script>
