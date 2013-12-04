@@ -41,25 +41,25 @@ Example output:
 
 #### $shelfNavigationPopup
 
-Shelf navigation, outputted as a <select> list with class "shelf_selection".
+Shelf navigation, outputted as a `<select>` list with class "shelf_selection".
 
 Example output:
 
     <select class="shelf_selection" onchange="location.href = this.options[this.selectedIndex].value;">
-	    <option value="index.html" selected="selected">Books</option>
-		<option value="games.html">Games</option>
-		<option value="movies.html">Movies</option>
-	</select>
+        <option value="index.html" selected="selected">Books</option>
+        <option value="games.html">Games</option>
+        <option value="movies.html">Movies</option>
+    </select>
 
 #### $pageNavigation
 
 Example output:
 
     <span class="arrow left">&nbsp;&nbsp;&nbsp;</span> 
-	<span class="pages">
-	    <span class="page">1</span> <a class="page" href="movies-2.html">2</a> <a class="page" href="movies-3.html">3</a>
-	</span> 
-	<a class="arrow right" href="moviesdvd-2.html">&nbsp;&nbsp;&nbsp;</a>
+    <span class="pages">
+        <span class="page">1</span> <a class="page" href="movies-2.html">2</a> <a class="page" href="movies-3.html">3</a>
+    </span> 
+    <a class="arrow right" href="moviesdvd-2.html">&nbsp;&nbsp;&nbsp;</a>
 
 ### Media
 
