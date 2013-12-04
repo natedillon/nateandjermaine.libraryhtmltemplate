@@ -1,7 +1,7 @@
 nateandjermaine.libraryhtmltemplate
 ===================================
 
-A Delicious Library 3 site template.
+A [Delicious Library 3](http://delicious-monster.com/) site template.
 
 ## Variables
 
